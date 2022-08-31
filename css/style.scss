@@ -1,0 +1,661 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&display=swap');
+ 
+ $main-color: 	#cda324;
+ $base-color:  	#FFAE64;
+ $accent-color: 	#FFB29D;
+
+
+ $header-height: 1.6;
+
+ $sml-margin-height: 15px 0px;
+
+ $md-margin-height: 25px 0px;
+        
+
+*{
+    font-family: 'Raleway', sans-serif;;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+ul li{
+    list-style: none;
+}
+
+h1{
+        font-size: 48px;
+        font-weight: 800;
+        text-transform: capitalize;   
+}
+
+h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.header{
+    background-image: url("../images/bg-above-the-fold.png");
+    /* Add the blur effect */
+    
+}
+
+.navbar{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__link__logo{
+    flex-basis: 70%;
+    width: 185px;
+    height: 70px; 
+}
+
+.navbar__menu{
+    display: flex;
+    padding: 25px 10px;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+    a{
+        color: black;
+        margin-right: 10px;
+        text-underline-offset: 10px;
+        
+    }
+    a:link {
+  text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+        color: $main-color;
+        
+    }
+    a:visited{
+        text-decoration: underline;
+        font-weight: 800;
+        
+    }
+    
+}
+
+.navbar__options{ 
+    padding: 0px 20px;
+   
+}
+
+/* Drop down section */
+
+.navbar__options__dropmenu{
+  position: relative;
+  display: inline-block;
+}
+
+.navbar__options__dropmenu__dropbtn__content{
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.navbar__options__dropmenu__dropbtn__content a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Show the dropdown menu on hover */
+.navbar__options__dropmenu:hover .navbar__options__dropmenu__dropbtn__content{display: block;}
+
+.banner{
+    position: relative;
+    max-width: 1400px;
+    height: 500px;
+}
+
+.header__hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+    
+    
+     
+}
+
+.header__hero__hand{
+    transform: rotate(65deg); /* Equal to rotateZ(45deg) */
+    max-width: 100px;
+    position: absolute;
+    left: -100px;    
+    
+}
+
+.header__hero__info{
+    margin-top: 100px;
+    
+    line-height: $header-height;
+    
+    
+}
+
+.info__content span{
+    color: $main-color;
+    
+}
+
+
+/* Inserting this collapsed row between two flex items will make 
+ * the flex item that comes after it break to a new row */
+ .break__row {
+    flex-basis: 100%;
+    height: 20px;
+  }
+
+.header__hero__icons{
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+    flex: 1;
+    
+   
+    
+    .hero__icon{
+      margin-left: 0; 
+      font-size: 22px;  
+      
+       i {
+        margin-right: 35px;
+        color: rgb(47, 47, 252);
+    }
+    }
+    
+}
+
+
+
+.fa-spin-hover:hover {
+  -webkit-animation: fa-spin 1s infinite linear;
+  -moz-animation: fa-spin 1s infinite linear;
+  -o-animation: fa-spin 1s infinite linear;
+  animation: fa-spin 1s infinite linear;
+}
+
+.header__hero__button{
+    margin-right: 0;
+    position: relative;
+  display: inline-block;
+    i:hover:after{
+        
+        width: 00px;
+        right: 90px;
+        
+        
+    }
+    i:after{
+        content: "";
+        height: 3px;
+        width: 140px;
+        background-color: $main-color;
+        position: absolute;
+        right: -10px;
+        top: 120%;
+        transform: translateY(-50%);
+    }
+    i:hover{
+        color: $main-color;
+    }
+}
+
+
+
+
+.portfolio{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    max-width: 1400px;
+
+    img{
+        max-width: 450px;
+        height: 300px;
+        border-radius: 5px;
+        
+        
+    }
+    h1{
+    
+      margin-bottom: 32px;
+    }
+    
+}
+
+.portfolio__content{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.portfolio__title{
+    flex-basis: 100%;
+    max-width: 1150px;
+    
+}
+
+.portfolio__first{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    flex-basis: 30%;
+}
+
+.portfolio__second{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 30%;
+}
+
+.portfolio__first__info{
+    
+    h3{
+        margin: $sml-margin-height;
+        color: $main-color;
+    }
+}
+
+
+.portfolio__second__info{
+    h3{
+        margin: $sml-margin-height;
+        color: $main-color;
+    }
+}
+
+.portfolio__first__info__content{
+
+    margin:  $md-margin-height;
+    p{
+        margin: $md-margin-height; 
+    }
+    i{
+        margin-right: 10px ;
+    }
+}
+
+.portfolio__second__info__content{
+
+    margin:  $md-margin-height;
+    p{
+        margin: $md-margin-height; 
+    }
+    i{
+        margin-right: 10px ;
+    }
+    
+}
+
+.portfolio__badges{
+    
+    i{
+        border: 1px solid $main-color;
+        border-radius: 3px;
+        margin-right: 10px;
+        line-height: 50px;
+        padding: 5px 10px;
+    }
+}
+
+
+
+.portfolio__bottom{
+    margin-right: 0;
+    position: relative;
+    display: inline-block;
+    i{
+        font-size: 18px;
+    }
+    a{
+        font-size: 18px;
+        padding-left: 5px;
+    }
+    i:hover:after{
+        
+        width: 00px;
+        right: 90px;
+        
+        
+    }
+    i:after{
+        content: "";
+        height: 3px;
+        width: 85px;
+        background-color: $main-color;
+        position: absolute;
+        right: 6px;
+        top: 120%;
+        transform: translateY(-50%);
+    }
+    i:hover{
+        color: $main-color;
+    }
+}
+.personal__contanier{
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+    padding: 60px 0;
+    column-gap: 15px;
+}
+
+.personal__img{
+    grid-column: 2 / span 3;
+    
+    img{
+     max-width: 380px;
+     height: 400px;
+     border-radius: 8px;
+    }
+}
+.personal__info{
+    grid-column: 8 / span 6;
+    
+    span{
+        color: $main-color;
+        margin: 10px 0px;
+    }
+    p{
+        margin-bottom: 15px;
+    }
+    h4{
+        margin-bottom: 16px;
+    }
+    .highlight{
+        font-weight: 500;
+        font-size: 20px;
+        margin: 16px 0px;
+        color: $main-color;
+    }
+    img{
+        margin-top: 30px;
+        max-width: 200px;
+        
+    }
+}
+
+.ability{
+    display: flex;
+     align-items: center;
+     justify-content: center;   
+    flex-wrap: wrap;
+    margin-bottom: 120px;
+    
+    max-width: 1000px;
+    h4{
+        flex-basis: 90%;
+        
+    }
+
+}
+
+.portfolio__badges{
+    flex-basis: 90%;
+}
+
+
+.talk__hand{
+    transform: rotate(20deg); /* Equal to rotateZ(45deg) */
+    height: 300px;
+    max-width: 300px;
+    position: absolute;
+    bottom: 90px;
+    right: -210px;
+    
+}
+
+input[type=text],textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+
+
+.subButton{
+    margin-right: 0;
+    position: relative;
+    display: inline-block;
+    i{
+        font-size: 18px;
+    }
+    a{
+        font-size: 18px;
+        padding-left: 5px;
+        text-decoration: none;
+    }
+    i:hover:after{
+        
+        width: 0px;
+        right: 90px;
+        
+        
+    }
+    i:after{
+        content: "";
+        height: 3px;
+        width: 95px;
+        background-color: $main-color;
+        position: absolute;
+        right: -5px;
+        top: 120%;
+        transform: translateY(-50%);
+    }
+    i:hover{
+        color: $main-color;
+    }
+}
+
+
+.talk{
+    max-width: 500px;
+   
+}
+
+/* Add a background color and some padding around the form */
+.talk__container {
+    margin-top: 16px;
+  border-radius: 5px;
+  max-width: 900px;
+  height: 500px;
+  position: relative;
+}
+.mobile__Nav {display: none;}
+
+@media only screen and (max-device-width: 600px) {
+    h1{
+        font-size: 36px;
+        font-weight: 800;
+        text-transform: capitalize;   
+    }
+
+    h3{
+    font-size: 18px;
+    font-weight: 600;
+    }
+
+   
+    .mobileHide { display: none;}
+    .mobile__Nav {
+        display: inline;
+    }
+    
+    /* Style the navigation menu */
+.mobile__Nav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+  
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.mobile__Nav #myLinks {
+  display: none;
+  background-color: black;
+  a:hover {
+  background-color: $main-color;
+  color: white;
+}
+
+}
+
+/* Style navigation menu links */
+.mobile__Nav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.mobile__Nav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 25px;
+}
+
+
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: $accent-color;
+  color: white;
+}
+.break__row {
+    flex-basis: 100%;
+    height: 0px;
+  }
+  .banner{
+    position: relative;
+    max-width: 1400px;
+    height: 400px;
+}
+    .header__hero__hand{
+    transform: rotate(65deg); /* Equal to rotateZ(45deg) */
+    height: 10px;
+    max-width: 10px;
+    position: relative;
+    top: 140px;
+    left: -250px;
+    
+}
+    
+   .header__hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 0px;
+    padding: 0px 30px;
+   }
+
+   
+
+   .portfolio{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px 10px;
+
+    .portfolio__content{
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+    img{
+        max-width: 300px;
+        height: 300px;
+        border-radius: 5px;
+        
+        
+    }
+    
+    
+}
+.personal__contanier{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50px);
+    column-gap: 30px;
+}
+
+.personal__img{
+    grid-column: 1 / span 5;
+    
+    img{
+     max-width: 300px;
+     height: 250px;
+     border-radius: 8px;
+    }
+}
+.personal__info{
+    grid-column: 1 / span 6;
+    margin: 10px 50px;
+    span{
+        color: $main-color;
+        margin: 10px 0px;
+    }
+    p{
+        margin-bottom: 10px;
+    }
+    h4{
+        margin-bottom: 16px;
+    }
+    .highlight{
+        font-weight: 500;
+        font-size: 20px;
+        margin: 16px 0px;
+        color: $main-color;
+    }
+}
+
+}
+footer{
+    margin-top: 150px;
+    text-align: center;
+}
+
+
+// @media screen and (max-width:1100px){
+//     .header__hero__hand{
+//     transform: rotate(65deg); /* Equal to rotateZ(45deg) */
+//     left: -200px;
+//     max-width: 50px;
+//     position: absolute;
+    
+    
+// }
+// }
+  
