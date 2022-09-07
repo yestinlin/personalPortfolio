@@ -36,6 +36,7 @@ h3{
     font-weight: 600;
 }
 
+
 .header{
     background-image: url("../images/bg-above-the-fold.png");
     /* Add the blur effect */
@@ -113,8 +114,7 @@ h3{
 .navbar__options__dropmenu:hover .navbar__options__dropmenu__dropbtn__content{display: block;}
 
 .banner{
-    position: relative;
-    max-width: 1400px;
+    
     height: 500px;
 }
 
@@ -123,19 +123,20 @@ h3{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 700px;
-    
-    
-     
+    max-width: 700px;  
+    position: relative;
+    .header__hero__hand{
+    position: absolute;
+    overflow: hidden;
+    max-width: 300px;
+    top: 50px;
+    left: -500px;    
+    transform: rotate(65deg); /* Equal to rotateZ(45deg) */
+   
+}
 }
 
-.header__hero__hand{
-    transform: rotate(65deg); /* Equal to rotateZ(45deg) */
-    max-width: 100px;
-    position: absolute;
-    left: -100px;    
-    
-}
+
 
 .header__hero__info{
     margin-top: 100px;
@@ -169,7 +170,7 @@ h3{
     
    
     
-    .hero__icon{
+ .hero__icon{
       margin-left: 0; 
       font-size: 22px;  
       
@@ -180,7 +181,6 @@ h3{
     }
     
 }
-
 
 
 .fa-spin-hover:hover {
@@ -215,8 +215,6 @@ h3{
         color: $main-color;
     }
 }
-
-
 
 
 .portfolio{
@@ -255,22 +253,15 @@ h3{
     
 }
 
-.portfolio__first{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    
-    flex-basis: 30%;
-}
 
-.portfolio__second{
+.portfolio__container{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     flex-basis: 30%;
 }
 
-.portfolio__first__info{
+.portfolio__info{
     
     h3{
         margin: $sml-margin-height;
@@ -279,25 +270,7 @@ h3{
 }
 
 
-.portfolio__second__info{
-    h3{
-        margin: $sml-margin-height;
-        color: $main-color;
-    }
-}
-
-.portfolio__first__info__content{
-
-    margin:  $md-margin-height;
-    p{
-        margin: $md-margin-height; 
-    }
-    i{
-        margin-right: 10px ;
-    }
-}
-
-.portfolio__second__info__content{
+.portfolio__info__content{
 
     margin:  $md-margin-height;
     p{
@@ -335,7 +308,7 @@ h3{
     }
     i:hover:after{
         
-        width: 00px;
+        width: 0px;
         right: 90px;
         
         
@@ -565,7 +538,7 @@ input[type=text],textarea {
     transform: rotate(65deg); /* Equal to rotateZ(45deg) */
     height: 10px;
     max-width: 10px;
-    position: relative;
+    position: absolute;
     top: 140px;
     left: -250px;
     
